@@ -5,12 +5,14 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 
 	"github.com/spf13/viper"
 )
 
 var (
-	mayarToken string
+	mayarToken  string
+	servicePort int
 )
 
 func init() {
@@ -19,22 +21,24 @@ func init() {
 
 	// Retrieve the value of the environment variable
 	mayarToken = viper.GetString("MAYAR_TOKEN")
-
-	log.Println("MAYAR TOKEN", mayarToken)
+	servicePort = viper.GetInt("PORT")
 
 	// Check if the environment variable is set
 	if mayarToken == "" {
 		fmt.Println("Environment variable not set.")
-		// os.Exit(1)
+		os.Exit(1)
 	}
 }
 
 func main() {
 	http.HandleFunc("/", webhookHandler)
 
-	port := 8080
-	fmt.Printf("Webhook server is running on port %d...\n", port)
-	err := http.ListenAndServe(fmt.Sprintf(":%d", port), nil)
+	if servicePort <= 0 {
+		servicePort = 8080
+	}
+
+	fmt.Printf("Webhook server is running on port %d...\n", servicePort)
+	err := http.ListenAndServe(fmt.Sprintf(":%d", servicePort), nil)
 	if err != nil {
 		fmt.Println("Error starting server:", err)
 	}
