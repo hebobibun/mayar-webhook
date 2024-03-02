@@ -31,16 +31,27 @@ The server will run on http://localhost:8080 by default.
 ## Usage
 
 Webhook Endpoints
-POST /
+| METHOD                        | Endpoint                               |
+| ---------------------------- | ----------------------------------------- |
+| POST                      | /                    |
 
-Receive incoming webhooks. Verify the Mayar token before processing the payload.
+
+
+Receive incoming webhooks.
 
 ## Supported Events
 
-testing: Handle testing events\
-payment.received: Handle payment received events\
-payment.reminder: Handle payment reminder events\
-shipper.status: Handle shipper status events\
-membership.memberUnsubscribed: Handle member unsubscribed events\
-membership.memberExpired: Handle member expired events
+| Event                        | Description                               |
+| ---------------------------- | ----------------------------------------- |
+| testing                      | Handle testing events                     |
+| payment.received             | Handle payment received events            |
+| payment.reminder             | Handle payment reminder events            |
+| shipper.status               | Handle shipper status events               |
+| membership.memberUnsubscribed| Handle member unsubscribed events          |
+| membership.memberExpired      | Handle member expired events               |
+
+## TODO 
+Verify the Mayar token before processing the payload.
+
+
 
