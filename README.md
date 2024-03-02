@@ -31,13 +31,10 @@ The server will run on http://localhost:8080 by default.
 ## Usage
 
 Webhook Endpoints
-| METHOD                        | Endpoint                               |
-| ---------------------------- | ----------------------------------------- |
-| POST                      | /                    |
+| METHOD           | Endpoint          | Description |
+| ---------------- | ----------------- |-------------|
+| POST             | /                 |Receive incoming webhooks. |
 
-
-
-Receive incoming webhooks.
 
 ## Supported Events
 
