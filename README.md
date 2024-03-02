@@ -41,14 +41,14 @@ Receive incoming webhooks.
 
 ## Supported Events
 
-| Event                        | Description                               |
-| ---------------------------- | ----------------------------------------- |
-| testing                      | Handle testing events                     |
-| payment.received             | Handle payment received events            |
-| payment.reminder             | Handle payment reminder events            |
-| shipper.status               | Handle shipper status events               |
-| membership.memberUnsubscribed| Handle member unsubscribed events          |
-| membership.memberExpired      | Handle member expired events               |
+| Event                        | Description                               | Status |
+| ---------------------------- | ----------------------------------------- |--------|
+| testing                      | Handle testing events                     |done    |
+| payment.received             | Handle payment received events            |done    |
+| payment.reminder             | Handle payment reminder events            |done    |
+| shipper.status               | Handle shipper status events               |failed    |
+| membership.memberUnsubscribed| Handle member unsubscribed events          |done    |
+| membership.memberExpired      | Handle member expired events               |done |
 
 ## TODO 
 Verify the Mayar token before processing the payload.
