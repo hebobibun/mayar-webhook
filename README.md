@@ -8,6 +8,7 @@ Make sure you have the following installed:
 
 - Go (Golang)
 - Dependencies (use `go mod tidy`)
+- WA sender service : [Whatsapp web js](https://wwebjs.dev/) / [WHMCS](https://github.com/Intprism-Technology/Whatsapp-WHMCS) or anything
 
 ## Getting Started
 
