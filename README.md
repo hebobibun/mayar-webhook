@@ -18,15 +18,18 @@ Make sure you have the following installed:
    cd webhook-server
 2. **Set up your environment variables:**
 
-   Create a .env file and add your Mayar token:
+   Create a local.env file and add your Mayar token:
    ```bash
    MAYAR_TOKEN=your_mayar_token
-   PORT=8080
+   PORT=8090
+   WASERVICEHOST=127.0.0.1
+   WASERVICEPORT=8080
+   ADMIN=+621111111111
 3. Build and run the server:
    ```bash
    go run main.go
-
-The server will run on http://localhost:8080 by default.
+   
+The server will run on http://localhost:8090 by default.
 
 ## Usage
 
@@ -43,12 +46,12 @@ Webhook Endpoints
 | testing                      | Handle testing events                     |done    |
 | payment.received             | Handle payment received events            |done    |
 | payment.reminder             | Handle payment reminder events            |done    |
-| shipper.status               | Handle shipper status events               |failed    |
+| shipper.status               | Handle shipper status events               |done    |
 | membership.memberUnsubscribed| Handle member unsubscribed events          |done    |
 | membership.memberExpired      | Handle member expired events               |done |
 
 ## TODO 
-Verify the Mayar token before processing the payload.
+[done] Verify the Mayar token before processing the payload.
 
 
 

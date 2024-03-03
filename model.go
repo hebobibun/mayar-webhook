@@ -13,8 +13,8 @@ type Data struct {
 	ID                          string        `json:"id"`
 	Status                      string        `json:"status"`
 	TransactionStatus           string        `json:"transactionStatus"`
-	CreatedAt                   int64         `json:"createdAt"`
-	UpdatedAt                   int64         `json:"updatedAt"`
+	CreatedAt                   time.Time     `json:"createdAt"`
+	UpdatedAt                   time.Time     `json:"updatedAt"`
 	MerchantID                  string        `json:"merchantId"`
 	MerchantName                string        `json:"merchantName"`
 	MerchantEmail               string        `json:"merchantEmail"`
@@ -30,6 +30,9 @@ type Data struct {
 	ProductType                 string        `json:"productType"`
 	PixelFbp                    string        `json:"pixelFbp"`
 	PixelFbc                    string        `json:"pixelFbc"`
+	TrackingUrl                 string        `json:"trackingUrl"`
+	TrackingCode                string        `json:"trackingCode"`
+	TrackingDescription         string        `json:"trackingDescription"`
 	CustomeField                []interface{} `json:"custom_field"`
 }
 
